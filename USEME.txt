@@ -1,0 +1,96 @@
+Introduction
+
+This controller implements the PPM Image Model, which allows the user to load, save, and transform images. The following commands are supported:
+
+load: loads an image file
+save: saves an image file
+greyscale: converts an image to greyscale
+horizontal-flip: flips an image horizontally
+vertical-flip: flips an image vertically
+rgb-split: splits an image into its RGB components
+rgb-combine: combines an image from its RGB components
+brighten: increases the brightness of an image
+darken: decreases the brightness of an image
+dither: applies a dither effect to an image
+blur: applies a blur filter to an image
+sharpen: applies a sharpen filter to an image
+sepia: applies a sepia tone effect to an image
+run: executes a file containing a sequence of commands
+exit: exits the application
+
+
+Command syntax
+
+Execute a file from command line:
+Java -jar res/Assignment04.jar -file <script-file-name>
+java -jar res/Assignment04.jar -file res/script.txt
+
+Launch GUI
+java -jar res/Assignment04.jar
+
+Launch App in text mode
+java -jar res/Assignment04.jar -text
+
+Lau
+
+load command
+load <input-file-path> <output-file-path>
+Loads an image from the given input file path and saves it to the given output file path.
+
+save command
+save <input-file-path> <output-file-path>
+Saves an image from the given input file path to the given output file path.
+
+greyscale command
+greyscale <value-component> <input-file-path> <output-file-path>
+Converts an image to greyscale. The value-component parameter determines the algorithm used for conversion, and can be one of the following:
+
+red-component: uses the red component of the RGB color model to determine the greyscale value
+blue-component: uses the blue component of the RGB color model to determine the greyscale value
+green-component: uses the green component of the RGB color model to determine the greyscale value
+value-component: uses the value component of the HSV color model to determine the greyscale value
+luma-component: uses the luma component of the YUV color model to determine the greyscale value
+
+horizontal-flip command
+horizontal-flip <input-file-path> <output-file-path>
+Flips an image horizontally.
+
+vertical-flip command
+vertical-flip <input-file-path> <output-file-path>
+Flips an image vertically.
+
+rgb-split command
+rgb-split <red-output-image> <green-output-image> <blue-output-image> <input-image>
+Splits an image into its RGB components and saves each component to a separate file.
+
+rgb-combine command
+rgb-combine <red-input-image> <green-input-image> <blue-input-image> <output-image>
+Combines the RGB components from separate files into a single image.
+
+brighten command
+brighten <increment> <input-image-name> <output-image-name>
+Increases the brightness of an image by the given increment.
+
+darken command
+darken <value> <input-image-name> <output-image-name>
+Decreases the brightness of an image by the given value.
+
+dither command
+dither <input-image-name> <output-image-name>
+Applies a dither effect to an image.
+
+blur command
+blur <input-image-name> <output-image-name>
+Applies a Blur effect to an image
+
+Sepia command
+sepia <input-image-name> <output-image-name>
+Applies a sepia tone effect to an image
+
+Run command
+run <script-path>
+executes a file containing a sequence of commands
+
+Exit command
+exit
+Quits the application

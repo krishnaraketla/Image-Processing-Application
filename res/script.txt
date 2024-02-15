@@ -1,0 +1,24 @@
+load res/imageset/sample1.bmp sample
+brighten 10 sample sample-brighter-by-10
+save res/sample-brighter-by-10.ppm sample-brighter-by-10
+darken 10 sample sample-darken-by-10
+save res/sample-darken-by-10.ppm sample-darken-by-10
+vertical-flip sample sample-vertical
+save res/sample-vertical.ppm sample-vertical
+horizontal-flip sample sample-horizontal
+save res/sample-horizontal.ppm sample-horizontal
+greyscale red-component sample sample-greyscaleRed
+save res/sample-greyscaleRed.ppm sample-greyscaleRed
+greyscale value-component sample sample-greyscaleValue
+save res/sample-greyscaleValue.ppm sample-greyscaleValue
+blur sample sampleblur
+save res/sampleblur.bmp sampleblur
+sharpen sample samplesharpen
+save res/samplesharpen.bmp samplesharpen
+sepia sample samplesepia
+save res/samplesepia.bmp samplesepia
+greyscale sample samplegreyscale
+save res/samplegreyscale.bmp samplegreyscale
+dither sample sampledither
+save res/sampledither.ppm sampledither
+exit
